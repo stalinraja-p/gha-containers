@@ -21,7 +21,7 @@ jobs:
       - name: Get Code
         uses: actions/checkout@v4
       - name: Cache dependencies
-        uses: actions/cache@v4s
+        uses: actions/cache@v4
         with:
           path: ~/.npm
           key: ${{ env.CACHE_KEY }}-${{ hashFiles('**/package-lock.json') }}
@@ -45,3 +45,4 @@ jobs:
           echo "MONGODB_DB_NAME: $MONGODB_DB_NAME"
           echo "MONGODB_USERNAME: $MONGODB_USERNAME"
           echo "${{ env.PORT }}"
+                 
